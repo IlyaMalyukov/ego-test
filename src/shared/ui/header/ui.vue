@@ -49,4 +49,9 @@ const isBackButtonVisible = computed(() => route?.path !== ROUTES.MAIN_PAGE.PATH
   width: 30px;
   margin-right: 10px;
 }
+
+.back {
+  display: flex;
+  margin-right: 10px;
+}
 </style>
