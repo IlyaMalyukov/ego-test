@@ -1,20 +1,34 @@
 <script setup lang="ts">
-import { NPageHeader } from "naive-ui";
+import { computed } from "vue";
+import { NIcon } from "naive-ui";
+import { ArrowLeft20Filled } from "@vicons/fluent";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+
+const isBackButtonVisible = computed(() => route?.path !== "/");
 </script>
 
 <template>
-  <NPageHeader
-    class="header"
-    title="EGO TEST"
-  >
-    <template #avatar>
-      <img
-        class="header-logo"
-        src="/src/assets/ego.png"
-        alt="logo"
+  <div class="header">
+    <RouterLink
+      v-if="isBackButtonVisible"
+      class="back"
+      to="/"
+    >
+      <NIcon
+        size="20"
+        color="#fff"
+        :component="ArrowLeft20Filled"
       />
-    </template>
-  </NPageHeader>
+    </RouterLink>
+    <img
+      class="header-logo"
+      src="/src/assets/ego.png"
+      alt="logo"
+    />
+    <span> EGO TEST </span>
+  </div>
 </template>
 
 <style scoped>
@@ -25,10 +39,13 @@ import { NPageHeader } from "naive-ui";
   width: 100%;
   background-color: rgba(24, 24, 28, 0.7);
   backdrop-filter: blur(10px);
-  padding: 10px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
   width: 30px;
+  margin-right: 10px;
 }
 </style>
