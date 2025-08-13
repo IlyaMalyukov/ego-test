@@ -1,6 +1,10 @@
-import { createApp } from "vue";
-import App from "./index.vue";
+import { createApp } from 'vue';
+import 'vfonts/Roboto.css';
+import './style.css';
+import { router } from './router';
+import App from './index.vue';
 
-const initializeApp = createApp(App);
+const app = createApp(App);
 
-export const app = initializeApp;
+app.use(router);
+app.mount('#app');
