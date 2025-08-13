@@ -3,16 +3,17 @@ import type { RouteRecordRaw } from "vue-router";
 
 import { MainPage } from "@/pages/main-page";
 import { TestPage } from "@/pages/test-page";
+import { ROUTES } from "@/shared";
 
 const routes: RouteRecordRaw[] = [
   {
-    path: "/",
-    name: "main",
+    path: ROUTES.MAIN_PAGE.PATH,
+    name: ROUTES.MAIN_PAGE.NAME,
     component: MainPage
   },
   {
-    path: "/test-page",
-    name: "test-page",
+    path: ROUTES.TEST_PAGE.PATH,
+    name: ROUTES.TEST_PAGE.NAME,
     component: TestPage
   }
 ];

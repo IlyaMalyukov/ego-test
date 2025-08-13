@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import { useRoute } from "vue-router";
 import { NIcon } from "naive-ui";
 import { ArrowLeft20Filled } from "@vicons/fluent";
-import { useRoute } from "vue-router";
+import { ROUTES } from "@/shared";
 
 const route = useRoute();
 
-const isBackButtonVisible = computed(() => route?.path !== "/");
+const isBackButtonVisible = computed(() => route?.path !== ROUTES.MAIN_PAGE.PATH);
 </script>
 
 <template>
@@ -14,7 +15,7 @@ const isBackButtonVisible = computed(() => route?.path !== "/");
     <RouterLink
       v-if="isBackButtonVisible"
       class="back"
-      to="/"
+      :to="ROUTES.MAIN_PAGE.PATH"
     >
       <NIcon
         size="20"
