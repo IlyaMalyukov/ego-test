@@ -1,3 +1,3 @@
-import router from './model';
+import router from "./model";
 
 export { router };

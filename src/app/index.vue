@@ -1,6 +1,12 @@
 <script setup lang="ts">
+import { RouterView } from "vue-router";
+import { NConfigProvider, darkTheme } from "naive-ui";
+import { Header } from "@/shared";
 </script>
 
 <template>
-	<router-view />
+  <NConfigProvider :theme="darkTheme">
+    <Header />
+    <RouterView />
+  </NConfigProvider>
 </template>
