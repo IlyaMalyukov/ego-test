@@ -18,11 +18,15 @@ const useTestPage = () => {
 
   const result = ref<Result>();
 
+  const toAnswer = () => {
+  };
+
   return {
     currentTest,
     currentQuestionIndex,
     totalQuestions,
     points,
+    toAnswer,
     result
   };
 };
