@@ -36,8 +36,10 @@ const isBackButtonVisible = computed(() => route?.path !== ROUTES.MAIN_PAGE.PATH
 .header {
   position: absolute;
   left: 0;
+  right: 0;
   top: 0;
   width: 100%;
+  box-sizing: border-box;
   background-color: rgba(24, 24, 28, 0.7);
   backdrop-filter: blur(10px);
   padding: 1rem;

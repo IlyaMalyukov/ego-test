@@ -11,8 +11,9 @@ const useTestPage = () => {
     return TESTS.find((test) => test.id === currentTestId);
   });
 
-  const currentQuestionIndex = ref(0);
-  const totalQuestions = ref(0);
+  const totalQuestions = computed(() => currentTest.value?.questions?.length ?? 0);
+
+  const currentQuestionNumber = ref(1);
 
   const points = ref(0);
 
@@ -23,7 +24,7 @@ const useTestPage = () => {
 
   return {
     currentTest,
-    currentQuestionIndex,
+    currentQuestionNumber,
     totalQuestions,
     points,
     toAnswer,
