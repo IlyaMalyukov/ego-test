@@ -19,7 +19,7 @@ const {
     :result="result"
   />
 
-  <div v-else>
+  <div v-else-if="currentTest?.questions">
     <div
       v-for="(question, index) in currentTest.questions"
       :key="question.id"

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { NCard } from "naive-ui";
 import { ROUTES } from "@/shared";
-import type { TestCardData } from "@/shared";
+import type { TestCardData } from "@/entities";
 
 type Props = {
   cardData: TestCardData,
