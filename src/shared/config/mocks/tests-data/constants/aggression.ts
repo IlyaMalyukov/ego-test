@@ -1,6 +1,8 @@
 import type { Test } from "../types.ts";
 
 const AGGRESSION_TEST: Test = {
+  id: "aggression",
+  title: "Агрессия",
   questions: [
     {
       id: "q1",

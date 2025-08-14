@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { NCard } from "naive-ui";
+import { ROUTES } from "@/shared";
 import type { TestCardData } from "@/shared";
 
 type Props = {
@@ -10,7 +11,7 @@ defineProps<Props>();
 </script>
 
 <template>
-  <RouterLink :to="{ name: 'test-page', query: { id: cardData.id } }">
+  <RouterLink :to="{ name: ROUTES.TEST_PAGE.NAME, query: { id: cardData.id } }">
     <NCard
       size="small"
       :title="cardData.title"

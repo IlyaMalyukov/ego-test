@@ -1,7 +1,7 @@
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import { TESTS } from "@/shared";
-import type { Test, Result } from "@/shared";
+import type { Test, Result, Answer } from "@/shared";
 
 const useTestPage = () => {
   const route = useRoute();
@@ -19,7 +19,21 @@ const useTestPage = () => {
 
   const result = ref<Result>();
 
-  const toAnswer = () => {
+  const getResult = () => {
+    result.value = currentTest.value.results.find((result: Result) => {
+      return result.minScore <= points.value && result.maxScore >= points.value;
+    });
+  };
+
+  const handleAnswer = (answer: Answer) => {
+    if (!answer) return;
+
+    currentQuestionNumber.value += 1;
+    points.value += answer.points;
+
+    if (totalQuestions.value === currentQuestionNumber.value) {
+      getResult();
+    }
   };
 
   return {
@@ -27,7 +41,7 @@ const useTestPage = () => {
     currentQuestionNumber,
     totalQuestions,
     points,
-    toAnswer,
+    handleAnswer,
     result
   };
 };

@@ -6,7 +6,7 @@ const {
   currentTest,
   currentQuestionNumber,
   totalQuestions,
-  toAnswer,
+  handleAnswer,
   result
 } = useTestPage();
 </script>
@@ -19,16 +19,26 @@ const {
     :result="result"
   />
 
-  <div
-    v-for="(question, index) in currentTest.questions"
-    :key="question.id"
-  >
-    <div v-if="index === currentQuestionNumber - 1">
-      <div> Вопрос {{ currentQuestionNumber }} из {{ totalQuestions }} </div>
-      <Question
-        :question="question"
-        @on-answer="toAnswer"
-      />
+  <div v-else>
+    <div
+      v-for="(question, index) in currentTest.questions"
+      :key="question.id"
+    >
+      <div v-if="index === currentQuestionNumber - 1">
+        <div class="questions-count">
+          Вопрос {{ currentQuestionNumber }} из {{ totalQuestions }}
+        </div>
+        <Question
+          :question="question"
+          @on-answer="handleAnswer"
+        />
+      </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.questions-count {
+  color: #f2c97d;
+}
+</style>

@@ -3,20 +3,32 @@ import { computed, ref } from "vue";
 import { NButton } from "naive-ui";
 import { RadioGroup } from "@/shared";
 import type { Option } from "naive-ui/es/transfer/src/interface";
-import type { Question } from "@/shared";
+import type { Question, Answer } from "@/shared";
 ;
 
 type Props = {
   question: Question;
 };
 
+type Emit = {
+  (e: "on-answer", answer: Answer): void;
+};
+
 const props = defineProps<Props>();
+
+const emit = defineEmits<Emit>();
 
 const selectedAnswerId = ref<string>();
 
 const options = computed<Option[]>(() => {
   return props.question?.answers?.map((answer) => ({ value: answer.id, label: answer.title })) ?? [];
 });
+
+const handleAnswer = () => {
+  const answer = props.question?.answers?.find((answer) => answer.id === selectedAnswerId.value);
+  if (!answer) return;
+  emit("on-answer", answer);
+};
 </script>
 
 <template>
@@ -32,6 +44,7 @@ const options = computed<Option[]>(() => {
       class="confirm-button"
       type="warning"
       :disabled="!selectedAnswerId"
+      @click="handleAnswer"
     >
       Ответить
     </NButton>

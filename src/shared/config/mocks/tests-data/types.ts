@@ -20,6 +20,7 @@ type Result = {
 
 type Test = {
   id: string;
+  title: string;
   questions: Question[];
   results: Result[];
 };

@@ -2,6 +2,7 @@ import type { Test } from "../types.ts";
 
 const CRITICAL_THINKING_TEST: Test = {
   id: "critical-thinking",
+  title: "Критическое мышление",
   questions: [
     {
       id: "q1",
