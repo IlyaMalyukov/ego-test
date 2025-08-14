@@ -1,4 +1,4 @@
-export const ROUTES = {
+const ROUTES = {
   MAIN_PAGE: {
     PATH: "/",
     NAME: "main-page"
@@ -8,3 +8,5 @@ export const ROUTES = {
     NAME: "test-page"
   }
 };
+
+export { ROUTES };
