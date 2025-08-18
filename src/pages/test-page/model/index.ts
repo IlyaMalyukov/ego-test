@@ -31,7 +31,7 @@ const useTestPage = () => {
     currentQuestionNumber.value += 1;
     points.value += answer.points;
 
-    if (totalQuestions.value === currentQuestionNumber.value) {
+    if (totalQuestions.value < currentQuestionNumber.value) {
       getResult();
     }
   };
