@@ -10,25 +10,25 @@ const AGGRESSION_TEST: Test = {
       answers: [
         { id: "a1", title: "Почти каждый день", points: 3 },
         { id: "a2", title: "1-2 раза в неделю", points: 1 },
-        { id: "a3", title: "Очень редко", points: 0 }
+        { id: "a3", title: "Очень редко", points: 0 },
       ]
     },
     {
       id: "q2",
       title: "Как вы реагируете, когда кто-то грубит вам в магазине/транспорте?",
       answers: [
-        { id: "a1", title: "Отвечаю грубостью", points: 3 },
         { id: "a2", title: "Молчу, но долго злюсь", points: 1 },
-        { id: "a3", title: "Не принимаю близко к сердцу", points: 0 }
+        { id: "a1", title: "Отвечаю грубостью", points: 3 },
+        { id: "a3", title: "Не принимаю близко к сердцу", points: 0 },
       ]
     },
     {
       id: "q3",
       title: "Что вы чувствуете, когда приходится долго ждать (очередь, лифт и т.п.)?",
       answers: [
-        { id: "a1", title: "Сильное раздражение", points: 3 },
         { id: "a2", title: "Легкое недовольство", points: 1 },
-        { id: "a3", title: "Спокойствие", points: 0 }
+        { id: "a1", title: "Сильное раздражение", points: 3 },
+        { id: "a3", title: "Спокойствие", points: 0 },
       ]
     },
     {
@@ -37,16 +37,16 @@ const AGGRESSION_TEST: Test = {
       answers: [
         { id: "a1", title: "Довольно часто", points: 3 },
         { id: "a2", title: "Только в крайних случаях", points: 1 },
-        { id: "a3", title: "Практически никогда", points: 0 }
+        { id: "a3", title: "Практически никогда", points: 0 },
       ]
     },
     {
       id: "q5",
       title: "Как вы ведете себя, когда кто-то критикует ваши действия?",
       answers: [
-        { id: "a1", title: "Сразу начинаю оправдываться/злиться", points: 3 },
         { id: "a2", title: "Чувствую дискомфорт, но молчу", points: 1 },
-        { id: "a3", title: "Спокойно выслушиваю", points: 0 }
+        { id: "a3", title: "Спокойно выслушиваю", points: 0 },
+        { id: "a1", title: "Сразу начинаю оправдываться/злиться", points: 3 },
       ]
     },
     {
@@ -55,25 +55,25 @@ const AGGRESSION_TEST: Test = {
       answers: [
         { id: "a1", title: "Повышаю голос или резко обрываю разговор", points: 3 },
         { id: "a2", title: "Вежливо прошу внимания", points: 1 },
-        { id: "a3", title: "Жду подходящего момента", points: 0 }
+        { id: "a3", title: "Жду подходящего момента", points: 0 },
       ]
     },
     {
       id: "q7",
       title: "Как часто вы срываете злость на неодушевленных предметах?",
       answers: [
-        { id: "a1", title: "Довольно часто", points: 3 },
         { id: "a2", title: "Очень редко", points: 1 },
-        { id: "a3", title: "Практически никогда", points: 0 }
+        { id: "a1", title: "Довольно часто", points: 3 },
+        { id: "a3", title: "Практически никогда", points: 0 },
       ]
     },
     {
       id: "q8",
       title: "Как вы ведете себя, когда у вас что-то не получается?",
       answers: [
-        { id: "a1", title: "Могу хлопнуть дверью или бросить предмет", points: 3 },
         { id: "a2", title: "Ругаюсь про себя", points: 1 },
-        { id: "a3", title: "Пробую снова или делаю перерыв", points: 0 }
+        { id: "a3", title: "Пробую снова или делаю перерыв", points: 0 },
+        { id: "a1", title: "Могу хлопнуть дверью или бросить предмет", points: 3 },
       ]
     },
     {
@@ -82,7 +82,7 @@ const AGGRESSION_TEST: Test = {
       answers: [
         { id: "a1", title: "Устраиваю скандал", points: 3 },
         { id: "a2", title: "Высказываю недовольство спокойно", points: 1 },
-        { id: "a3", title: "Напоминаю о договоренности", points: 0 }
+        { id: "a3", title: "Напоминаю о договоренности", points: 0 },
       ]
     },
     {
@@ -91,7 +91,7 @@ const AGGRESSION_TEST: Test = {
       answers: [
         { id: "a1", title: "Почти постоянно", points: 3 },
         { id: "a2", title: "Иногда", points: 1 },
-        { id: "a3", title: "Редко", points: 0 }
+        { id: "a3", title: "Редко", points: 0 },
       ]
     }
   ],
