@@ -89,8 +89,8 @@ const AGGRESSION_TEST: Test = {
       id: "q10",
       title: "Как часто вы чувствуете внутреннее напряжение без видимой причины?",
       answers: [
-        { id: "a1", title: "Почти постоянно", points: 3 },
         { id: "a2", title: "Иногда", points: 1 },
+        { id: "a1", title: "Почти постоянно", points: 3 },
         { id: "a3", title: "Редко", points: 0 },
       ]
     }
